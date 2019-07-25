@@ -1,0 +1,32 @@
+.bodycolor
+{ 
+    padding-top:7px;
+}
+.container
+{
+    border-radius: 30px 30px;
+    background: rgb(139,69,252);
+    background: linear-gradient(90deg, rgba(139,69,252,1) 33%, rgba(13,235,229,1) 61%);
+    margin:auto;
+    text-align: center;
+    max-width: 50%;
+    max-height: 70%;
+    padding-top: 7px;
+    padding-left: 6.5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+}
+.btnstyle
+{
+    padding: 0.5%;
+    border-radius: 8px;
+    
+}
+.btnright
+{
+    margin-right: 7px;
+}
+.btnleft
+{
+    margin-left: 7px;
+}

@@ -1,0 +1,40 @@
+body{
+    background: url("facereco.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+.frame{
+    display: block;
+    padding: 5px;
+    margin: 20px 200px ;
+    width: 400px;
+    height: 400px;
+    background-color: powderblue;
+}
+.frame-capture-button{
+    display: block;
+    padding: 10px 20px;
+    background-color: #c4302b ;
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.frame-capture-button a
+{
+    text-decoration: none;
+    color: antiquewhite;
+}
+#canvas{
+ display: none;
+}
+#icn{
+    margin: 10x;
+    padding: 10px;
+}

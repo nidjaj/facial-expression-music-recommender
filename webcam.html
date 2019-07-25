@@ -1,0 +1,67 @@
+CTYPE html>
+<html>
+<head>
+    <script src="jquery.js"></script>
+    <title>Sanp Photo</title>
+    <script>
+        var canvas, context, video, videoObj;
+
+        $(function () {
+            canvas = document.getElementById("canvas");
+            context = canvas.getContext("2d");
+            video = document.getElementById("video");
+
+            // different browsers provide getUserMedia() in differnt ways, so we need to consolidate 
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||  navigator.mozGetUserMedia;
+
+            if (navigator.getUserMedia) {
+                navigator.getUserMedia(
+                   { video : true }, // which media
+                   function (stream) {   // success function
+                       video.src = window.URL.createObjectURL(stream);
+                       video.onloadedmetadata = function (e) {
+                           video.play();
+                       };
+                   },
+                   function (err) {  // error function 
+                       console.log("The following error occured: " + err.name);
+                   }
+              );
+            } 
+            else {
+                console.log("getUserMedia not supported");
+            }
+        });
+
+        function takePhoto() {
+            context.drawImage(video, 0, 0, 640, 480);
+        }
+
+        function savePhoto() {
+            var data = canvas.toDataURL();
+            var title = $("#title").val();
+
+            $.ajax({
+                type: "POST",
+                url: "savephoto.aspx",
+                data: {
+                    photo: data,
+                    title: title
+                }
+            }).done(function (o) {
+                alert("Photo Saved Successfully!");
+            });
+        }
+    </script>
+</head>
+<body>
+    Enter Title : <input type="text" name="title" id="title" />
+    <button id="btnSnap" onclick="takePhoto()">Snap Photo</button>
+    <button id="btnSave" onclick="savePhoto()">Save Photo</button>
+    <a href="ListPhotos.aspx">ListPhotos.aspx</a>
+    <p />
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas style="float:right" id="canvas" width="640" height="480"></canvas>
+</body>
+</html>
+

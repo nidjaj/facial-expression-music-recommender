@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="mystyle1.css">
+
+    </head>
+    <body>
+       <div class="jumbotron">
+         <img    src="https://cdn3.iconfinder.com/data/icons/user-interface-web-1/550/web-circle-circular-round_11-512.png"  align="top" height="100px" width="100px">
+         <h1>Cache Coders</h1>
+       </div>   
+       <div class="container">
+         <h2>Sign In to Your Account</h2><br>
+         <div class="form-group">
+          <form action="/cgi-bin/logindb.py"  method="POST">
+            <label for="email"><h3>Email</h3></label>
+            <div class="col-xs-2">
+            <input type="email" placeholder="Enter your email" class="form-control" id="email" name="email"></div>
+         </div>
+         <div class="form-group">
+            <label for="pwd"><h3>Password</h3></label>
+            <input type="password" placeholder="Enter your password" class="form-control" id="pwd" name="pwd">
+         </div>
+         <div class="form-group form-check">
+          <input class="form-check-input" type="checkbox"> Remember Me
+         </div>
+	 <button type="submit" class="btn  btn-dark">Sign In</button>
+         <button type="submit" formaction="new_account.html" class="btn btn-dark"> Create new account </button>  
+       </div>
+	</form>
+    </body>
+</html>

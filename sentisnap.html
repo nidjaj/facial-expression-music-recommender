@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What will you choose?</title>
+<style>
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 750px;
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+</style>
+</head>
+<body>
+<a href="image.jpeg">
+<img src="image.jpeg" alt="Image" align="middle">
+</a>
+<form  action="/cgi-bin/spotify.py" method="POST">
+<br><br>
+<button type="submit" class="btn btn-dark"> Play music with Spotify </button>
+<br><br>
+</form>
+<form action="/cgi-bin/tube.py" method="POST">
+<button type="submit" class="btn btn-dark"> Play music with YouTube </button>
+<br><br>
+</form>
+<form action="/cgi-bin/logout.py" method="POST">
+<button type="submit" class="btn btn-dark"> Logout</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="acc_style.css">
+    </head>
+    <body>
+            <div class="container">
+                    <img    src="https://cdn3.iconfinder.com/data/icons/user-interface-web-1/550/web-circle-circular-round_11-512.png" height="100px" width="100px"><br>
+                    <h2>Create Your Account</h2><br>
+                    <div class="form-group">
+                       <form action='/cgi-bin/signupdb.py' method="POST">
+                       <label for="username"><h3>Username</h3></label>
+                       <div class="col-xs-2">
+                       <input type="username" placeholder="Enter username" class="form-control" id="usrname" name="email" required></div>
+                    </div>
+                    <div class="form-group">
+                       <label for="pwd"><h3>Password</h3></label>
+                       <input type="password" placeholder="Enter password" class="form-control" id="pwd" name="pwd" required>
+                    </div>
+                    <div class="form-group">
+                            <label for="pwd-repeat"><h3>Confirm Password</h3></label>
+                            <input type="password" placeholder="Confirm password" class="form-control" id="pwd-repeat" name="pwd-repeat" required>
+                    </div>
+                    <label>
+                            <input type="checkbox" unchecked="unchecked" name="remember" style="margin-bottom:15px"> Remember me
+                          </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:rgb(255, 30, 60)">Terms & Privacy</a>.</p>
+            <div class="button">       
+                    <button type="submit" class="btn btn-dark">Submit</button></form>
+		    <button type="submit" class="btn btn-dark"><a href="index.html" style="text-decoration: none; color: #fff;">Cancel</a></button>
+
+           </div>
+               </body>
+           </html>
